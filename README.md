@@ -1,3 +1,132 @@
+<iframe src="https://debeatzgh.wordpress.com/2025/08/18/%f0%9f%9a%80-sliding-newsletter-signup-widget-with-pulse-animation-free-code-demo/" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+<!-- Sliding Newsletter Signup Widget with Pulse Animation -->
+<style>
+  /* Floating circular button */
+  #newsletterBtn {
+    position: fixed;
+    top: 65%;
+    right: 20px;
+    background-color: #16a34a;
+    color: white;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+  #newsletterBtn:hover {
+    background-color: #0f9a2a;
+  }
+
+  /* Pulse animation */
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(22, 163, 74, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+  }
+
+  /* Sliding panel */
+  #newsletterPanel {
+    position: fixed;
+    top: 0;
+    right: -420px; /* Hidden off-screen */
+    width: 400px;
+    max-width: 95%;
+    height: 100%;
+    background: #fff;
+    box-shadow: -4px 0 15px rgba(0,0,0,0.2);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s ease;
+  }
+
+  /* Header with close button */
+  #panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #16a34a;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+  }
+  #closePanel {
+    background: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Iframe inside panel */
+  #newsletterPanel iframe {
+    border: none;
+    flex: 1;
+    width: 100%;
+  }
+
+  /* Background overlay */
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 9998;
+  }
+</style>
+
+<!-- Floating Button -->
+<div id="newsletterBtn" title="Subscribe">
+  ✉️
+</div>
+
+<!-- Overlay -->
+<div id="overlay"></div>
+
+<!-- Sliding Panel -->
+<div id="newsletterPanel">
+  <div id="panelHeader">
+    <span>Subscribe for Updates</span>
+    <button id="closePanel">X</button>
+  </div>
+  <iframe src="https://mailchi.mp/dda1a453c7bd/ai-decoder" loading="lazy"></iframe>
+</div>
+
+<script>
+  const btn = document.getElementById("newsletterBtn");
+  const panel = document.getElementById("newsletterPanel");
+  const closeBtn = document.getElementById("closePanel");
+  const overlay = document.getElementById("overlay");
+
+  btn.addEventListener("click", () => {
+    panel.style.right = "0";
+    overlay.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", closePanel);
+  overlay.addEventListener("click", closePanel);
+
+  function closePanel() {
+    panel.style.right = "-420px";
+    overlay.style.display = "none";
+  }
+</script>
+<iframe class="BLOG_video_class" allowfullscreen="" youtube-src-id="dIpri8oC1tM" width="320" height="266" src="https://www.youtube.com/embed/dIpri8oC1tM"></iframe>
+
+
+
+
 # Sliding Newsletter Signup Widget with Pulse Animation
 
 🔔 A sleek and modern floating button + sliding panel widget for newsletter subscriptions.  
